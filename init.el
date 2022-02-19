@@ -61,7 +61,7 @@ This function should only modify configuration layer settings."
      ;; https://develop.spacemacs.org/layers/+lang/clojure/README.html
      (clojure :variables
               ;; clojure-backend 'cider               ;; use cider and disable lsp
-              ;; clojure-enable-linters 'clj-kondo    ;; clj-kondo included in lsp
+              clojure-enable-linters 'clj-kondo    ;; clj-kondo included in lsp
               cider-repl-display-help-banner nil      ;; disable help banner
               cider-pprint-fn 'fipp                   ;; fast pretty printing
               clojure-indent-style 'align-arguments
@@ -234,9 +234,9 @@ This function should only modify configuration layer settings."
      ;; Support font ligatures (fancy symbols) in all modes
      ;; 'prog-mode for only programming languages
      ;; including text-mode may cause issues with org-mode and magit
-     (unicode-fonts :variables
-                    unicode-fonts-enable-ligatures t
-                    unicode-fonts-ligature-modes '(prog-mode))
+     ;; (unicode-fonts :variables
+     ;;               unicode-fonts-enable-ligatures t
+     ;;               unicode-fonts-ligature-modes '(prog-mode))
 
      ;; Highlight changes in buffers
      ;; SPC g . transient state for navigating changes
